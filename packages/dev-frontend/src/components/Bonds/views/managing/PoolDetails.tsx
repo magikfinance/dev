@@ -26,13 +26,13 @@ export const PoolDetails: React.FC = () => {
             sx={{ alignItems: "center", justifyContent: "flex-start" }}
             inputId="deposit-pool-balance"
           >
-            <PoolBalance symbol="bLUSD">
+            <PoolBalance symbol="bMUSD">
               {(bLusdAmmBLusdBalance ?? Decimal.ZERO).prettify(2)}
             </PoolBalance>
 
             <Text sx={{ fontWeight: "light", mx: "12px" }}>+</Text>
 
-            <PoolBalance symbol="LUSD">
+            <PoolBalance symbol="MUSD">
               {(bLusdAmmLusdBalance ?? Decimal.ZERO).prettify(2)}
             </PoolBalance>
           </StaticAmounts>

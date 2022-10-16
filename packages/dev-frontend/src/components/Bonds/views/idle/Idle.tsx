@@ -63,16 +63,16 @@ export const Idle: React.FC = () => {
           ))}
 
         <Button variant="outline" onClick={handleBuyBLusdPressed}>
-          Buy bLUSD
+          Buy bMUSD
         </Button>
 
         <Button variant="outline" onClick={handleSellBLusdPressed}>
-          Sell bLUSD
+          Sell bMUSD
         </Button>
 
         {showLusdFaucet && (
           <Button variant={hasBonds ? "outline" : "primary"} onClick={() => getLusdFromFaucet()}>
-            Get 10k LUSD
+            Get 10k MUSD
           </Button>
         )}
 

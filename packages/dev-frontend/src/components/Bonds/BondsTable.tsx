@@ -112,9 +112,9 @@ export const BondsTable: React.FC = () => {
               const rebondDays = (bond.rebondTime.getTime() - Date.now()) / 1000 / 60 / 60 / 24;
               return (
                 <React.Fragment key={idx}>
-                  <Text>{bond.deposit.shorten()} LUSD</Text>
-                  <Text>{bond.accrued.shorten()} bLUSD</Text>
-                  <Text>{bond.marketValue.shorten()} LUSD</Text>
+                  <Text>{bond.deposit.shorten()} MUSD</Text>
+                  <Text>{bond.accrued.shorten()} bMUSD</Text>
+                  <Text>{bond.marketValue.shorten()} MUSD</Text>
                   <Text>{formatDays(breakEvenDays)}</Text>
                   <Text>{formatDays(rebondDays)}</Text>
 

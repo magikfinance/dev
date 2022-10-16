@@ -1,4 +1,4 @@
-export const COIN = "LUSD";
-export const GT = "LQTY";
-export const LP = "UNI LP";
+export const COIN = "MUSD";
+export const GT = "MAGIK";
+export const LP = "MAGIK LP";
 // export const LP = "ETH/LUSD LP";

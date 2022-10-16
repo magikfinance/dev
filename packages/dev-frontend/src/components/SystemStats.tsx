@@ -20,7 +20,7 @@ const Balances: React.FC = () => {
   return (
     <Box sx={{ mb: 3 }}>
       <Heading>My Account Balances</Heading>
-      <Statistic name="ETH"> {accountBalance.prettify(4)}</Statistic>
+      <Statistic name="FTM"> {accountBalance.prettify(4)}</Statistic>
       <Statistic name={COIN}> {lusdBalance.prettify()}</Statistic>
       <Statistic name={GT}>{lqtyBalance.prettify()}</Statistic>
     </Box>
@@ -94,16 +94,16 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
 
       <Statistic
         name="Borrowing Fee"
-        tooltip="The Borrowing Fee is a one-off fee charged as a percentage of the borrowed amount (in LUSD) and is part of a Trove's debt. The fee varies between 0.5% and 5% depending on LUSD redemption volumes."
+        tooltip="The Borrowing Fee is a one-off fee charged as a percentage of the borrowed amount (in MUSD) and is part of a Trove's debt. The fee varies between 0.5% and 5% depending on MUSD redemption volumes."
       >
         {borrowingFeePct.toString(2)}
       </Statistic>
 
       <Statistic
         name="TVL"
-        tooltip="The Total Value Locked (TVL) is the total value of Ether locked as collateral in the system, given in ETH and USD."
+        tooltip="The Total Value Locked (TVL) is the total value of Fantom locked as collateral in the system, given in FTM and USD."
       >
-        {total.collateral.shorten()} <Text sx={{ fontSize: 1 }}>&nbsp;ETH</Text>
+        {total.collateral.shorten()} <Text sx={{ fontSize: 1 }}>&nbsp;FTM</Text>
         <Text sx={{ fontSize: 1 }}>
           &nbsp;(${Decimal.from(total.collateral.mul(price)).shorten()})
         </Text>
@@ -111,13 +111,13 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
       <Statistic name="Troves" tooltip="The total number of active Troves in the system.">
         {Decimal.from(numberOfTroves).prettify(0)}
       </Statistic>
-      <Statistic name="LUSD supply" tooltip="The total LUSD minted by the Liquity Protocol.">
+      <Statistic name="MUSD supply" tooltip="The total MUSD minted by the Liquity Protocol.">
         {total.debt.shorten()}
       </Statistic>
       {lusdInStabilityPoolPct && (
         <Statistic
-          name="LUSD in Stability Pool"
-          tooltip="The total LUSD currently held in the Stability Pool, expressed as an amount and a fraction of the LUSD supply.
+          name="MUSD in Stability Pool"
+          tooltip="The total MUSD currently held in the Stability Pool, expressed as an amount and a fraction of the MUSD supply.
         "
         >
           {lusdInStabilityPool.shorten()}
@@ -125,14 +125,14 @@ export const SystemStats: React.FC<SystemStatsProps> = ({ variant = "info", show
         </Statistic>
       )}
       <Statistic
-        name="Staked LQTY"
-        tooltip="The total amount of LQTY that is staked for earning fee revenue."
+        name="Staked MAGIK"
+        tooltip="The total amount of MAGIK that is staked for earning fee revenue."
       >
         {totalStakedLQTY.shorten()}
       </Statistic>
       <Statistic
         name="Total Collateral Ratio"
-        tooltip="The ratio of the Dollar value of the entire system collateral at the current ETH:USD price, to the entire system debt."
+        tooltip="The ratio of the Dollar value of the entire system collateral at the current FTM:USD price, to the entire system debt."
       >
         {totalCollateralRatioPct.prettify()}
       </Statistic>

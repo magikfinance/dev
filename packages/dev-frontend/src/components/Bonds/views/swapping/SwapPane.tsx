@@ -18,8 +18,8 @@ import { useBondView } from "../../context/BondViewContext";
 import { BLusdAmmTokenIndex } from "../../context/transitions";
 
 const tokenSymbol: Record<BLusdAmmTokenIndex, string> = {
-  [BLusdAmmTokenIndex.BLUSD]: "bLUSD",
-  [BLusdAmmTokenIndex.LUSD]: "LUSD"
+  [BLusdAmmTokenIndex.BLUSD]: "bMUSD",
+  [BLusdAmmTokenIndex.LUSD]: "MUSD"
 };
 
 const outputToken: Record<BLusdAmmTokenIndex, BLusdAmmTokenIndex> = {
@@ -157,7 +157,7 @@ export const SwapPane: React.FC = () => {
     <>
       <Heading as="h2" sx={{ pt: 2, pb: 3, px: 2 }}>
         <Flex sx={{ justifyContent: "center" }}>
-          {inputToken === BLusdAmmTokenIndex.BLUSD ? <>Sell</> : <>Buy</>} bLUSD
+          {inputToken === BLusdAmmTokenIndex.BLUSD ? <>Sell</> : <>Buy</>} bMUSD
         </Flex>
         <Close
           onClick={handleDismiss}
@@ -322,10 +322,10 @@ export const SwapPane: React.FC = () => {
 
       <Flex pb={2} sx={{ fontSize: "15.5px", justifyContent: "center", fontStyle: "italic" }}>
         Your swap is performed directly in&nbsp;
-        <Link href="https://curve.fi/factory-crypto/134" target="_blank">
-          Curve
+        <Link href="https://magikswap.dog/" target="_blank">
+          MagikSwap
         </Link>
-        &nbsp;protocol.
+        &nbsp;
       </Flex>
 
       <Flex variant="layout.actions">

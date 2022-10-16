@@ -87,9 +87,9 @@ export const DepositPane: React.FC = () => {
     <>
       <EditableRow
         label="Deposit #1"
-        inputId="deposit-blusd"
+        inputId="deposit-bmusd"
         amount={bLusdAmount.prettify(2)}
-        unit="bLUSD"
+        unit="bMUSD"
         editingState={editingState}
         editedAmount={bLusdAmount.toString()}
         setEditedAmount={amount => setBLusdAmount(Decimal.from(amount))}
@@ -99,9 +99,9 @@ export const DepositPane: React.FC = () => {
 
       <EditableRow
         label="Deposit #2"
-        inputId="deposit-lusd"
+        inputId="deposit-musd"
         amount={lusdAmount.prettify(2)}
-        unit="LUSD"
+        unit="MUSD"
         editingState={editingState}
         editedAmount={lusdAmount.toString()}
         setEditedAmount={amount => setLusdAmount(Decimal.from(amount))}
@@ -126,12 +126,12 @@ export const DepositPane: React.FC = () => {
           Deposit exceeds your balance by{" "}
           {isBLusdBalanceInsufficient && (
             <>
-              <Amount>{bLusdAmount.sub(coalescedBLusdBalance).prettify(2)} bLUSD</Amount>
+              <Amount>{bLusdAmount.sub(coalescedBLusdBalance).prettify(2)} bMUSD</Amount>
               {isLusdBalanceInsufficient && <> and </>}
             </>
           )}
           {isLusdBalanceInsufficient && (
-            <Amount>{lusdAmount.sub(coalescedLusdBalance).prettify(2)} LUSD</Amount>
+            <Amount>{lusdAmount.sub(coalescedLusdBalance).prettify(2)} MUSD</Amount>
           )}
         </ErrorDescription>
       )}

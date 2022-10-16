@@ -1,6 +1,6 @@
 export const PENDING_BONDS = {
   term: "Pending bonds",
-  description: "Your active bonds which are accruing bLUSD and can be claimed or cancelled."
+  description: "Your active bonds which are accruing bMUSD and can be claimed or cancelled."
 };
 
 export const BONDS = {
@@ -11,7 +11,7 @@ export const BONDS = {
 export const NOT_BONDED_YET = {
   term: "You don't have any pending bonds.",
   description:
-    "You can bond LUSD to obtain Boosted LUSD (bLUSD) - a yield-amplified derivative of LUSD."
+    "You can bond MUSD to obtain Boosted MUSD (bMUSD) - a yield-amplified derivative of MUSD."
 };
 
 export const BONDS_NAVIGATION = {
@@ -42,23 +42,23 @@ export const BOND_NFT = {
 export const BREAK_EVEN_TIME = {
   term: "Break-even time",
   description:
-    "Estimated time at which the bond will have accrued enough bLUSD to offset the LUSD cost of the bond, under current market prices."
+    "Estimated time at which the bond will have accrued enough bMUSD to offset the MUSD cost of the bond, under current market prices."
 };
 
 export const OPTIMUM_REBOND_TIME = {
   term: "Rebond time",
   description:
-    "Estimated optimum time to claim the bond, sell the bLUSD for LUSD, and then bond again, to maximize your return under current market prices."
+    "Estimated optimum time to claim the bond, sell the bMUSD for MUSD, and then bond again, to maximize your return under current market prices."
 };
 
 export const REBOND_RETURN = {
   term: `${OPTIMUM_REBOND_TIME.term} return`,
-  description: `Estimated return from selling your accrued bLUSD to LUSD at the ${OPTIMUM_REBOND_TIME.term}, minus the initial LUSD cost of the bond, under current market prices.`
+  description: `Estimated return from selling your accrued bMUSD to MUSD at the ${OPTIMUM_REBOND_TIME.term}, minus the initial MUSD cost of the bond, under current market prices.`
 };
 
 export const REBOND_TIME_ROI = {
   term: `${OPTIMUM_REBOND_TIME.term} ROI`,
-  description: `Estimated ROI of selling your accrued bLUSD to LUSD at the ${OPTIMUM_REBOND_TIME.term}, minus the initial LUSD cost of the bond, under current market prices.`
+  description: `Estimated ROI of selling your accrued bMUSD to MUSD at the ${OPTIMUM_REBOND_TIME.term}, minus the initial MUSD cost of the bond, under current market prices.`
 };
 
 export const OPTIMUM_APY = {
@@ -68,7 +68,7 @@ export const OPTIMUM_APY = {
 
 export const OPTIMUM_ACCRUAL = {
   term: "Rebond accrual",
-  description: `The required amount of bLUSD to accrue for the ${OPTIMUM_REBOND_TIME.term}, under current market prices.`
+  description: `The required amount of bMUSD to accrue for the ${OPTIMUM_REBOND_TIME.term}, under current market prices.`
 };
 
 export const BOND_DEPOSIT = {
@@ -79,13 +79,13 @@ export const BOND_DEPOSIT = {
 
 export const ACCRUED_AMOUNT = {
   term: "Accruing",
-  description: "The amount of bLUSD this bond has accrued so far."
+  description: "The amount of bMUSD this bond has accrued so far."
 };
 
 export const MARKET_VALUE = {
   term: "Accrued value",
   description:
-    "Current market value of the accrued bLUSD. The bLUSD market price can fluctuate but will always be higher than the floor price under rational market conditions."
+    "Current market value of the accrued bMUSD. The bMUSD market price can fluctuate but will always be higher than the floor price under rational market conditions."
 };
 
 export const BOND_AGE = {
@@ -96,7 +96,7 @@ export const BOND_AGE = {
 export const BOND_RETURN = {
   term: "Claim-now return",
   description:
-    "Expected LUSD gained from claiming the bond now and selling the bLUSD for LUSD and deducting the initial cost of the bond, under current market prices."
+    "Expected MUSD gained from claiming the bond now and selling the bMUSD for MUSD and deducting the initial cost of the bond, under current market prices."
 };
 
 export const BOND_STATUS = {
@@ -106,7 +106,7 @@ export const BOND_STATUS = {
 
 export const PENDING_STATUS = {
   term: "Pending",
-  description: "An active bond which is accruding bLUSD and can be cancelled or claimed."
+  description: "An active bond which is accruding bMUSD and can be cancelled or claimed."
 };
 
 export const CANCELLED_STATUS = {
@@ -122,25 +122,25 @@ export const CLAIMED_STATUS = {
 export const CANCEL_BOND = {
   term: "Cancel bond",
   description:
-    "A bond can be cancelled at any time to recover the initially deposited LUSD amount while forgoing the accrued bLUSD."
+    "A bond can be cancelled at any time to recover the initially deposited MUSD amount while forgoing the accrued bMUSD."
 };
 
 export const CLAIM_BOND = {
   term: "Claim bond",
   description:
-    "A bond can be claimed at any time to forgo the initially deposited LUSD amount and gain the accrued bLUSD."
+    "A bond can be claimed at any time to forgo the initially deposited MUSD amount and gain the accrued bMUSD."
 };
 
 export const BLUSD_MARKET_PRICE = {
   term: "Market price",
   description:
-    "The current price of bLUSD according to the bLUSD Curve pool. As long as the bLUSD pool is empty, the market price shown corresponds to the initial Curve v2 price parameter used to initalize the pool."
+    "The current price of bMUSD according to the bMUSD Curve pool. As long as the bMUSD pool is empty, the market price shown corresponds to the initial Curve v2 price parameter used to initalize the pool."
 };
 
 export const BLUSD_FAIR_PRICE = {
   term: "Fair price",
   description:
-    "An estimated range of the market price of bLUSD based on the current yield amplification. The lower bound excludes the Pending bucket, the upper bound factors all buckets."
+    "An estimated range of the market price of bMUSD based on the current yield amplification. The lower bound excludes the Pending bucket, the upper bound factors all buckets."
 };
 
 export const TOTAL_BONDS_STATISTIC = {
@@ -166,50 +166,50 @@ export const CLAIMED_BONDS_STATISTIC = {
 
 export const BLUSD_SUPPLY = {
   term: "Total supply",
-  description: "The total amount of bLUSD in circulation. Not including pending bonds accrued bLUSD."
+  description: "The total amount of bMUSD in circulation. Not including pending bonds accrued bMUSD."
 };
 
 export const BLUSD_FLOOR_PRICE = {
   term: "Floor price",
   description:
-    "The amount of LUSD that an arbitrageur could redeem bLUSD for thus creating a lower bound bLUSD market price."
+    "The amount of MUSD that an arbitrageur could redeem bMUSD for thus creating a lower bound bMUSD market price."
 };
 
 export const BLUSD_APR = {
   term: "APR",
-  description: "The APR of bLUSD, based on the yield generated from each bucket in the Treasury."
+  description: "The APR of bMUSD, based on the yield generated from each bucket in the Treasury."
 };
 
 export const BLUSD_YIELD_AMPLIFICATION = {
   term: "Yield amplification",
   description:
-    "The bLUSD token generates a yield which is a multiple of the Stability Pool yield. It is derived from the total protocol yield which is being diverted to the Reserve bucket."
+    "The bMUSD token generates a yield which is a multiple of the Stability Pool yield. It is derived from the total protocol yield which is being diverted to the Reserve bucket."
 };
 
 export const TREASURY_TOTAL = {
   term: "Total",
   description:
-    "The total amount of LUSD held by the protocol within the three buckets (Pending, Reserve, Permanent)."
+    "The total amount of MUSD held by the protocol within the three buckets (Pending, Reserve, Permanent)."
 };
 
 export const TREASURY_PENDING = {
   term: "Pending",
   description:
-    "Contains the deposited LUSD of the users while they bond. Pending bonds can be claimed or cancelled any time, moving the LUSD into the Reserve and Permanent buckets, or back to the bonder, respectively."
+    "Contains the deposited MUSD of the users while they bond. Pending bonds can be claimed or cancelled any time, moving the MUSD into the Reserve and Permanent buckets, or back to the bonder, respectively."
 };
 
 export const TREASURY_ACQUIRED = {
   term: "Reserve",
   description:
-    "Contains a portion of the LUSD obtained from claimed bonds and captures the yield from the entire Treasury. It acts as a reserve backing the bLUSD supply. bLUSD can be redeemed for a pro-rata share of the LUSD held in the acquired bucket."
+    "Contains a portion of the MUSD obtained from claimed bonds and captures the yield from the entire Treasury. It acts as a reserve backing the bMUSD supply. bMUSD can be redeemed for a pro-rata share of the MUSD held in the acquired bucket."
 };
 
 export const TREASURY_PERMANENT = {
   term: "Permanent",
   description:
-    "Contains a portion of the LUSD obtained from claimed bonds which contributes a permanent price premium over LUSD. The LUSD in this bucket is not redeemable."
+    "Contains a portion of the MUSD obtained from claimed bonds which contributes a permanent price premium over MUSD. The MUSD in this bucket is not redeemable."
 };
 
 export const ESTIMATES_ONLY_NOTICE = {
-  description: "These metrics are estimations based on the current bLUSD market price"
+  description: "These metrics are estimations based on the current bMUSD market price"
 };

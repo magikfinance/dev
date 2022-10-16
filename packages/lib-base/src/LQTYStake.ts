@@ -5,7 +5,7 @@ import { Decimal, Decimalish } from "./Decimal";
  *
  * @public
  */
-export type LQTYStakeChange<T> =
+export type MAGIKStakeChange<T> =
   | { stakeLQTY: T; unstakeLQTY?: undefined }
   | { stakeLQTY?: undefined; unstakeLQTY: T; unstakeAllLQTY: boolean };
 
@@ -13,11 +13,11 @@ export type LQTYStakeChange<T> =
  * Represents a user's LQTY stake and accrued gains.
  * 
  * @remarks
- * Returned by the {@link ReadableLiquity.getLQTYStake | getLQTYStake()} function.
+ * Returned by the {@link ReadableLiquity.getMAGIKStake | getMAGIKStake()} function.
 
  * @public
  */
-export class LQTYStake {
+export class MAGIKStake {
   /** The amount of LQTY that's staked. */
   readonly stakedLQTY: Decimal;
 
@@ -48,9 +48,9 @@ export class LQTYStake {
   }
 
   /**
-   * Compare to another instance of `LQTYStake`.
+   * Compare to another instance of `MAGIKStake`.
    */
-  equals(that: LQTYStake): boolean {
+  equals(that: MAGIKStake): boolean {
     return (
       this.stakedLQTY.eq(that.stakedLQTY) &&
       this.collateralGain.eq(that.collateralGain) &&
@@ -59,11 +59,11 @@ export class LQTYStake {
   }
 
   /**
-   * Calculate the difference between this `LQTYStake` and `thatStakedLQTY`.
+   * Calculate the difference between this `MAGIKStake` and `thatStakedLQTY`.
    *
    * @returns An object representing the change, or `undefined` if the staked amounts are equal.
    */
-  whatChanged(thatStakedLQTY: Decimalish): LQTYStakeChange<Decimal> | undefined {
+  whatChanged(thatStakedLQTY: Decimalish): MAGIKStakeChange<Decimal> | undefined {
     thatStakedLQTY = Decimal.from(thatStakedLQTY);
 
     if (thatStakedLQTY.lt(this.stakedLQTY)) {
@@ -79,11 +79,11 @@ export class LQTYStake {
   }
 
   /**
-   * Apply a {@link LQTYStakeChange} to this `LQTYStake`.
+   * Apply a {@link MAGIKStakeChange} to this `MAGIKStake`.
    *
    * @returns The new staked LQTY amount.
    */
-  apply(change: LQTYStakeChange<Decimalish> | undefined): Decimal {
+  apply(change: MAGIKStakeChange<Decimalish> | undefined): Decimal {
     if (!change) {
       return this.stakedLQTY;
     }

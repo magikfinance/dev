@@ -4,7 +4,7 @@ import { Decimal } from "./Decimal";
 import { StabilityDeposit } from "./StabilityDeposit";
 import { Trove, TroveWithPendingRedistribution, UserTrove } from "./Trove";
 import { Fees } from "./Fees";
-import { LQTYStake } from "./LQTYStake";
+import { MAGIKStake } from "./LQTYStake";
 import { FrontendStatus } from "./ReadableLiquity";
 
 /**
@@ -94,7 +94,7 @@ export interface LiquityStoreBaseState {
   _feesInNormalMode: Fees;
 
   /** User's LQTY stake. */
-  lqtyStake: LQTYStake;
+  lqtyStake: MAGIKStake;
 
   /** Total amount of LQTY currently staked. */
   totalStakedLQTY: Decimal;

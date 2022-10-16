@@ -10,8 +10,8 @@ import { BLusdAmmTokenIndex } from "../../context/transitions";
 import { PoolDetails } from "./PoolDetails";
 
 const tokenSymbol = new Map([
-  [BLusdAmmTokenIndex.BLUSD, "bLUSD"],
-  [BLusdAmmTokenIndex.LUSD, "LUSD"]
+  [BLusdAmmTokenIndex.BLUSD, "bMUSD"],
+  [BLusdAmmTokenIndex.LUSD, "MUSD"]
 ]);
 
 const WithdrawnAmount: React.FC<{ symbol: string }> = ({ symbol, children }) => (
